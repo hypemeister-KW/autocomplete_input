@@ -11,8 +11,13 @@ function filterData(query) {
   );
 }
 
+function escapeRegex(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
 function highlightMatch(text, query) {
-  const regex = new RegExp(`(${query})`, "gi");
+  const escaped = escapeRegex(query);
+  const regex = new RegExp(`(${escaped})`, "gi");
   return text.replace(regex, `<span class="highlight">$1</span>`);
 }
 
