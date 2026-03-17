@@ -71,6 +71,9 @@ input.addEventListener("keydown", (e) => {
     currentIndex++;
   } else if (e.key === "ArrowUp") {
     currentIndex--;
+  } else if (e.key === "Escape") {
+    hideList();
+    return;
   } else if (e.key === "Enter") {
     if (currentIndex >= 0) {
       items[currentIndex].click();
