@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 40px;
+}
+
+.autocomplete {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 80px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+ul {
+  position: absolute;
+  top: 100%;
+  list-style: none;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 5px;
+  width: 325px;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+li:hover,
+li.active {
+  background: #f0f0f0;
+}
+
+.hidden {
+  display: none;
+}
+
+.highlight {
+  font-weight: bold;
+}
