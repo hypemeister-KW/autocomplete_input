@@ -86,6 +86,7 @@ input.addEventListener("keydown", (e) => {
 
   items.forEach((item) => item.classList.remove("active"));
   items[currentIndex].classList.add("active");
+  items[currentIndex].scrollIntoView({ block: "nearest", behavior: "smooth" });
 });
 
 document.addEventListener("click", (e) => {
